@@ -7,7 +7,7 @@ class WordCombination
     hash[:y] = 9
     hash[:z] = 9
     @dictionary = []
-    File.read('word_combinations/dictionary.txt').each_line do |line|
+    File.read('dictionary.txt').each_line do |line|
       @dictionary << { line.strip.split('').map { |k| hash[k.downcase.to_sym] }.join => line.strip }
     end
     @mat = [[3, 3, 4], [3, 4, 3], [4, 3, 3], [4, 6, 0], [5, 5, 0], [6, 4, 0], [7, 3, 0], [3, 7, 0], [10, 0, 0]]
@@ -36,6 +36,6 @@ class WordCombination
   end
 
   def validate_phone_number(ph_num)
-    ph_num.include?('0') || ph_num.include?('1')
+    ph_num.include?('0') || ph_num.include?('1') || ph_num.size != 10
   end
 end

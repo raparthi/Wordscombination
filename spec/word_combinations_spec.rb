@@ -31,8 +31,13 @@ describe do
     end
   end
 
-  it 'shoud return error 9008457334' do
+  it 'shoud return error when invalid number 9008457334' do
     data = wc.get_words('9008457334')
+    expect(data).to include('Invalid phone number')
+  end
+
+  it 'shoud return error when invalid length number' do
+    data = wc.get_words('9445845733454554')
     expect(data).to include('Invalid phone number')
   end
 end
