@@ -22,6 +22,12 @@ wc = WordCombination.new
 
 wc.get_words("6686787825")
 
+
+##Specs
+To excute specs
+
+rspec spec/word_combinations_spec.rb
+
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
