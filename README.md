@@ -23,7 +23,8 @@ wc = WordCombination.new
 wc.get_words("6686787825")
 
 
-##Specs
+## Specs
+
 To excute specs
 
 rspec spec/word_combinations_spec.rb
